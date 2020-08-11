@@ -1,5 +1,6 @@
 import com.truedev.kinoposk.api.model.film.FilmExt;
 import com.truedev.kinoposk.api.service.KinopoiskApiService;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class Kinopoisk {
     public static void main(String[] args) {

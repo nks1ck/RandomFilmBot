@@ -59,31 +59,12 @@ public class Bot extends TelegramLongPollingBot {
         if (message != null && message.hasText()) {
             if (message.getText().equals("/start")) {
                 try {
-                    sendMsg(message, "Привет \uD83D\uDC4B, введи любую букву, что бы бот выдал тебе рандомный фильм \uD83D\uDE09 \n\n" +
-                            "Команда /bug выведет баги, которые замечены на данный момент и над которыми уже работают\n\n" +
-                            "По команда /dev вы можете узнать, над чем сейчас работает разработчик" , true);
+                    sendMsg(message, "Привет \uD83D\uDC4B, введи 'Film', что бы бот выдал тебе рандомный фильм \uD83D\uDE09 \n\n", true);
                 } catch (TelegramApiException e) {
                     e.printStackTrace();
                 }
             }
 
-            if (message.getText().equals("/bug")) {
-                try {
-                    sendMsg(message, "На данный момент, бот находится на стадии разработки, поэтому могут быть какие - либо баги \uD83D\uDE0C \n\n" +
-                            "Самый частый баг, на данный момент, это невозможность быстро получать второй фильм \uD83D\uDE15 \n\n" +
-                            "Иногда приходится писать 2 - 3 раза, что бы бот отрегировал и выдал второй рандомный фильм \uD83D\uDE21 \n\n", true);
-                } catch (TelegramApiException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            if (message.getText().equals("/dev")) {
-                try {
-                    sendMsg(message, "Сейчас идет работа, над фиксом багов и над более красивым выводом фильмов \uD83D\uDE0F \n ",true);
-                } catch (TelegramApiException e) {
-                    e.printStackTrace();
-                }
-            }
 
             if (message.getText().equals("Film")) {
                 try {
@@ -109,11 +90,11 @@ public class Bot extends TelegramLongPollingBot {
     } */
 
     public String getBotUsername() {
-        return "YourBotName";
+        return "RandFilmBot";
     }
 
     public String getBotToken() {
-        return "YourBotToken";
+        return "1353768240:AAEKxs2rXgEGhO3h2fDbMEVhVkJoJUMrxl4";
     }
 
 
